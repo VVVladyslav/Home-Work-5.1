@@ -1,6 +1,6 @@
 public class Iterative {
 
-    public static int findNthFibonacci(int nNumberToSearch) {
+    public static int findNumber(int nNumberToSearch) {
         int fibNumberMin2 = 0;
         int fibNumberMin1 = 1;
         int fibNumberToReturn = 0;

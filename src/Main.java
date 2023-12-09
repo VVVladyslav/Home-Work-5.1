@@ -4,7 +4,7 @@ public class Main {
         Iterative iterative = new Iterative();
 
         int nNumber = 7;
-        int result = iterative.findNthFibonacci(nNumber);
+        int result = iterative.findNumber(nNumber);
         System.out.println(result);
 
     }
