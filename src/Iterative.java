@@ -1,22 +1,20 @@
 public class Iterative {
 
-    public int[] sortIteratively(int[] fibanachInts){
+    public static int findNthFibonacci(int nNumberToSearch) {
+        int fibNumberMin2 = 0;
+        int fibNumberMin1 = 1;
+        int fibNumberToReturn = 0;
 
-        boolean isIntsSorted = false;
-        while (!isIntsSorted){
-            isIntsSorted = true;
-            for (int i = 1; i < fibanachInts.length; i++) {
-                if (fibanachInts[i] < fibanachInts[i - 1]) {
-                    int temp = fibanachInts[i];
-                    fibanachInts[i] = fibanachInts[i - 1];
-                    fibanachInts[i - 1] = temp;
-                    isIntsSorted = false;
-                }
-            }
+        if (nNumberToSearch <= 1) {
+            return nNumberToSearch;
         }
-        for (int print : fibanachInts){
-            System.out.print(print + " ");
+
+        for (int i = 2; i <= nNumberToSearch; i++) {
+            fibNumberToReturn = fibNumberMin2 + fibNumberMin1;
+            fibNumberMin2 = fibNumberMin1;
+            fibNumberMin1 = fibNumberToReturn;
         }
-        return fibanachInts;
+
+        return fibNumberToReturn;
     }
 }
