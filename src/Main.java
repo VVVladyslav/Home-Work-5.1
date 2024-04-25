@@ -6,6 +6,5 @@ public class Main {
         int nNumber = 7;
         int result = iterative.findNumber(nNumber);
         System.out.println(result);
-
     }
 }
